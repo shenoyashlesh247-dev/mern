@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Items</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Items</h1>
+
+    <form id="item-form" class="card" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="price">Price</label>
+        <input type="number" id="price" name="price" min="0" step="any">
+      </div>
+      <p id="message" role="alert" aria-live="polite"></p>
+      <div class="form-actions">
+        <button type="button" id="cancel" class="secondary" hidden>Cancel</button>
+        <button type="submit" id="submit">Submit</button>
+      </div>
+    </form>
+
+    <div class="card table-wrap">
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Name</th><th>Price</th><th>Action</th></tr>
+        </thead>
+        <tbody id="item-rows"></tbody>
+      </table>
+      <p id="empty" hidden>No items yet. Add one using the form above.</p>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
